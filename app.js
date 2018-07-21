@@ -6,6 +6,8 @@ const mongoose = require('mongoose');
 const config = require('./config/database');
 const app = express();
 const port = 3000;
+const cors = require('cors');
+
 require('./config/passport')(passport);
 
 mongoose.connect(config.database, { useNewUrlParser: true }, (error) => {
@@ -26,7 +28,7 @@ const users = require('./routes/users');
 app.get('/', (req, res, next) => {
     res.send("Denis");
 })
-
+app.use(cors());
 app.use('/users', users);
 
 
