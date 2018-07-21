@@ -1,0 +1,25 @@
+{
+  "name": "meanauthapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.0",
+    "body-parser": "^1.18.3",
+    "bootstrap": "^4.1.2",
+    "cors": "*",
+    "express": "*",
+    "jquery": "^3.3.1",
+    "jsonwebtoken": "*",
+    "mongoose": "*",
+    "node-gyp": "^3.7.0",
+    "passport": "*",
+    "passport-jwt": "*"
+  },
+  "author": "",
+  "license": "ISC"
+}
