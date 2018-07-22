@@ -35,7 +35,7 @@ router.get('/register', (req, res, next) => {
 })
 
 router.get('/authenticate', (req, res, next) => {
-    console.log("GET /authenticate")
+    //console.log("GET /authenticate")
     res.status(200).json({ message: 'GET' })
 })
 
@@ -51,6 +51,7 @@ router.post('/authenticate', (req, res, next) => {
         })
         if (!user) {
             return res.status(200).json({
+                success: false,
                 msg: "user not found"
             })
         }
@@ -81,7 +82,7 @@ router.post('/authenticate', (req, res, next) => {
                 })
             }
             else {
-                return res.status(400).json({
+                return res.status(200).json({
                     success: false, msg: "wrong password"
                 })
             }
